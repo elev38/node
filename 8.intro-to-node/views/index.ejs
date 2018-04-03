@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+    <h1> Add <%= title %> </h1>
+    <form meth od='POST' action='users/add'>
+        <label>First Name</label>
+        <input type='text' name='first_name'>
+        <br>
+        <label>Last Name</label>
+        <input type='text' name='last_name'>
+        <br>
+        <label>Email</label>
+        <input type='text' name='email'>
+        <br>
+        <input type='submit' value='submit'>
+    <ul>
+    <% user.forEach((user) => { %>
+        <li> <%= user.first_name %> <%= user.last_name %> - <%= user.email %> </li>
+    <% }) %>
+    </ul>
+
+<% include partials/footer %>
+
